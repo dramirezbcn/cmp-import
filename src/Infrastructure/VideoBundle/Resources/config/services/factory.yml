@@ -1,0 +1,4 @@
+services:
+    video.factory:
+        class: Infrastructure\VideoBundle\Factory\VideoFactory
+

@@ -1,0 +1,3 @@
+services:
+    video.repository:
+        class: Infrastructure\VideoBundle\Repository\VideoRepository

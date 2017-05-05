@@ -1,0 +1,23 @@
+services:
+    video.command:
+        class: Application\UseCase\Video\VideoCommand
+        arguments:
+          - '@video.factory'
+          - '@video.repository'
+
+    video.query:
+        class: Application\UseCase\Video\VideoQuery
+        arguments:
+          - '@video.repository'
+
+    parser.command:
+        class: Application\UseCase\Parser\ParserCommand
+        arguments:
+          - '@parser.glorf'
+          - '@parser.flub'
+
+    import.command:
+        class: Application\UseCase\ImportCommand
+        arguments:
+          - '@parser.command'
+          - '@video.command'
