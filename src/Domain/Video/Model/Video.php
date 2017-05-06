@@ -7,8 +7,6 @@ namespace Domain\Video\Model;
  */
 class Video
 {
-    const FLUB = 'flub', GLORF = 'glorf';
-
     /** @var  int */
     private $id;
 

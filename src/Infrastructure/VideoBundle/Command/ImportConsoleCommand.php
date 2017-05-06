@@ -3,13 +3,12 @@
 namespace Infrastructure\VideoBundle\Command;
 
 use Application\UseCase\Parser\Request\ParseRequest;
-use Domain\Parser\Parser;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ImportCommand extends ContainerAwareCommand
+class ImportConsoleCommand extends ContainerAwareCommand
 {
     protected function configure()
     {

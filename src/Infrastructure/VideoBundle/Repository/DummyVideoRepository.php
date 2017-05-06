@@ -6,10 +6,10 @@ use Domain\Video\Model\Video;
 use Domain\Video\Repository\VideoRepositoryInterface;
 
 /**
- * Class VideoRepository
+ * Class DummyVideoRepository
  * @package Infrastructure\VideoBundle\Repository
  */
-class VideoRepository implements VideoRepositoryInterface
+class DummyVideoRepository implements VideoRepositoryInterface
 {
     /**
      * @inheritDoc

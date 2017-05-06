@@ -9,6 +9,9 @@ use Domain\Video\Model\Video;
  */
 class Parser
 {
+    const   FLUB = 'flub',
+            GLORF = 'glorf';
+
     /** @var  ParserInterface */
     private $parser;
 

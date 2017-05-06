@@ -2,19 +2,19 @@
 
 namespace Tests\Infrastructure\VideoBundle\Command;
 
-use Infrastructure\VideoBundle\Command\ImportCommand;
+use Infrastructure\VideoBundle\Command\ImportConsoleCommand;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class ImportCommandTest extends KernelTestCase
+class ImportConsoleCommandTest extends KernelTestCase
 {
     public function testExecuteGlorf()
     {
         self::bootKernel();
         $application = new Application(self::$kernel);
 
-        $application->add(new ImportCommand());
+        $application->add(new ImportConsoleCommand());
 
         $command = $application->find('import');
         $commandTester = new CommandTester($command);
@@ -32,7 +32,7 @@ class ImportCommandTest extends KernelTestCase
         self::bootKernel();
         $application = new Application(self::$kernel);
 
-        $application->add(new ImportCommand());
+        $application->add(new ImportConsoleCommand());
 
         $command = $application->find('import');
         $commandTester = new CommandTester($command);

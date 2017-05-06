@@ -13,7 +13,8 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new \Infrastructure\VideoBundle\InfrastructureVideoBundle()
+            new \Infrastructure\VideoBundle\InfrastructureVideoBundle(),
+            new \Infrastructure\ParserBundle\InfrastructureParserBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

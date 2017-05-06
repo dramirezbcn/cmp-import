@@ -6,7 +6,7 @@ use Application\UseCase\Video\Request\CreateVideoRequest;
 use Application\UseCase\Video\VideoCommand;
 use Domain\Video\Model\Video;
 use Infrastructure\VideoBundle\Factory\VideoFactory;
-use Infrastructure\VideoBundle\Repository\VideoRepository;
+use Infrastructure\VideoBundle\Repository\DummyVideoRepository;
 
 class VideoCommandTest extends \PHPUnit_Framework_TestCase
 {
@@ -33,7 +33,7 @@ class VideoCommandTest extends \PHPUnit_Framework_TestCase
             ->once()
             ->getMock();
 
-        $videoRepositoryMock = \Mockery::mock(VideoRepository::class)
+        $videoRepositoryMock = \Mockery::mock(DummyVideoRepository::class)
             ->shouldReceive('store')
             ->withArgs([$this->videoMock])
             ->andReturn($this->videoMock)

@@ -10,12 +10,6 @@ services:
         arguments:
           - '@video.repository'
 
-    parser.command:
-        class: Application\UseCase\Parser\ParserCommand
-        arguments:
-          - '@parser.glorf'
-          - '@parser.flub'
-
     import.command:
         class: Application\UseCase\ImportCommand
         arguments:
