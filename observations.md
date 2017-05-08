@@ -1,4 +1,4 @@
-#Observations
+# Observations
 
 - I implemented the strategy pattern to solve which parser apply to each different source.
 - The DummyVideoRepository doesn't persist anything, just echo the information.
