@@ -1,0 +1,7 @@
+services:
+    parser.command:
+        class: Application\UseCase\Parser\ParserCommand
+        arguments:
+          - '@parser.glorf'
+          - '@parser.flub'
+          - '@parser.factory'

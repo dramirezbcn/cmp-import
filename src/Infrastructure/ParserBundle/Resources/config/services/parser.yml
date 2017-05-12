@@ -1,0 +1,16 @@
+services:
+    parser.flub:
+        class: Domain\Parser\FlubParser
+        parent:
+        arguments:
+          - '@video.factory'
+          - '%flub_file_path%'
+
+    parser.glorf:
+        class: Domain\Parser\GlorfParser
+        arguments:
+          - '@video.factory'
+          - '%glorf_file_path%'
+
+
+

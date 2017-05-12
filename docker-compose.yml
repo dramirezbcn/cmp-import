@@ -1,0 +1,12 @@
+version: '2'
+services:
+  fpm:
+    image: dramirezbcn/php7.0
+    container_name: app_dev_fpm
+    ports:
+      - "2222:22"
+    volumes:
+      - ~/.ssh:/root/.ssh
+      - .:/app
+    working_dir: /app
+
